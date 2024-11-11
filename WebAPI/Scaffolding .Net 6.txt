@@ -1,0 +1,4 @@
+1. Create Project
+2. install Packages
+3. Go to dir
+4. dotnet ef dbcontext scaffold "Data Source=MAMUN\SQLEXPRESS;Initial Catalog=dbERP;Connect Timeout=30;Encrypt=False;Trusted_Connection=true;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" Microsoft.EntityFrameworkCore.SqlServer -o "Models" -c "AppDbContext" --context-dir "DBContext" -t [dbo].[tblProducts] -t [dbo].[tblOrders] -f --project "C:\Users\ibos\Mamun\WebAPI\Task-01\CRUD\CRUD\CRUD.csproj"

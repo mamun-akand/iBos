@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uioWhESmF+o=",
+  "dgSpecHash": "B26LaCz61Xc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask\\WebApiTask\\WebApiTask\\WebApiTask.csproj",
+  "projectFilePath": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask-1\\WebApiTask\\WebApiTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ibos\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ibos\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

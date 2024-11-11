@@ -4482,11 +4482,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask\\WebApiTask\\WebApiTask\\WebApiTask.csproj",
+      "projectUniqueName": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask-1\\WebApiTask\\WebApiTask.csproj",
       "projectName": "WebApiTask",
-      "projectPath": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask\\WebApiTask\\WebApiTask\\WebApiTask.csproj",
+      "projectPath": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask-1\\WebApiTask\\WebApiTask.csproj",
       "packagesPath": "C:\\Users\\ibos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask\\WebApiTask\\WebApiTask\\obj\\",
+      "outputPath": "C:\\Users\\ibos\\Mamun\\WebAPI\\WebApiTask-1\\WebApiTask\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
