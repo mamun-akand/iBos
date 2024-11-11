@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 379,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Scaffold-DbContext.txt",
-              "DocumentMoniker": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
-              "RelativeDocumentMoniker": "CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
-              "ToolTip": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
-              "RelativeToolTip": "CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-11T09:09:06.377Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -41,9 +28,22 @@
               "RelativeDocumentMoniker": "CRUD\\DBContext\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\DBContext\\AppDbContext.cs",
               "RelativeToolTip": "CRUD\\DBContext\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T09:08:32.074Z",
+              "WhenOpened": "2024-11-11T09:37:45.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Scaffold-DbContext.txt",
+              "DocumentMoniker": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
+              "RelativeDocumentMoniker": "CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
+              "ToolTip": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
+              "RelativeToolTip": "CRUD\\DB_SCRIPT\\Scaffold-DbContext.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-11T09:09:06.377Z",
               "EditorCaption": ""
             }
           ]

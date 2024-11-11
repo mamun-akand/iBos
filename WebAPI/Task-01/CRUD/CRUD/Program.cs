@@ -1,3 +1,6 @@
+using CRUD.DBContext;
+using Microsoft.EntityFrameworkCore;
+
 namespace CRUD
 {
     public class Program
@@ -13,6 +16,16 @@ namespace CRUD
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+
+            /* Added Start */
+
+            var connectionString = builder.Configuration.GetConnectionString("CRUDConnectionString"); //added
+            builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString)); //added 
+            //builder.Services.AddScoped<IColdDrinks, ColdDrinksRepository>();  //added
+
+            /* Added End */
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -25,7 +38,6 @@ namespace CRUD
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
