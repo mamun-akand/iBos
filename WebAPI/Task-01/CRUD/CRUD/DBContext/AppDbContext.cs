@@ -32,9 +32,7 @@ public partial class AppDbContext : DbContext
 
             entity.ToTable("tblOrders");
 
-            entity.Property(e => e.IntOrderId)
-                .ValueGeneratedNever()
-                .HasColumnName("intOrderId");
+            entity.Property(e => e.IntOrderId).HasColumnName("intOrderId");
             entity.Property(e => e.DteLastActionDateTime)
                 .HasColumnType("datetime")
                 .HasColumnName("dteLastActionDateTime");
@@ -57,9 +55,7 @@ public partial class AppDbContext : DbContext
 
             entity.ToTable("tblProducts");
 
-            entity.Property(e => e.IntProductId)
-                .ValueGeneratedNever()
-                .HasColumnName("intProductId");
+            entity.Property(e => e.IntProductId).HasColumnName("intProductId");
             entity.Property(e => e.NumStock)
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("numStock");
@@ -73,5 +69,6 @@ public partial class AppDbContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
+
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

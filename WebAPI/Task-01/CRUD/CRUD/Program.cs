@@ -1,4 +1,6 @@
 using CRUD.DBContext;
+using CRUD.IRepository;
+using CRUD.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace CRUD
@@ -21,7 +23,7 @@ namespace CRUD
 
             var connectionString = builder.Configuration.GetConnectionString("CRUDConnectionString"); //added
             builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString)); //added 
-            //builder.Services.AddScoped<IColdDrinks, ColdDrinksRepository>();  //added
+            builder.Services.AddScoped<IOrder, Order>();  //added
 
             /* Added End */
 
