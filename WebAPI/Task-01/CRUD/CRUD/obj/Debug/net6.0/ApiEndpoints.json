@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "CRUD.Controllers.OrderController",
+    "Method": "CreateBulkOrders",
+    "RelativePath": "api/Order/CreateBulkOrders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orders",
+        "Type": "System.Collections.Generic.List\u00601[[CRUD.DTO.OrderDTO, CRUD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.Controllers.OrderController",
     "Method": "CreateOrder",
     "RelativePath": "api/Order/CreateOrder",
     "HttpMethod": "POST",
@@ -13,17 +29,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CRUD.Helper.OrderMessageHelper",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CRUD.Controllers.OrderController",
@@ -39,17 +45,17 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CRUD.Helper.MessageHelper",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.Controllers.OrderController",
+    "Method": "GetOrdersWithProductDetails",
+    "RelativePath": "api/Order/GetOrdersWithProductDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CRUD.Controllers.OrderController",
@@ -69,6 +75,36 @@
   },
   {
     "ContainingType": "CRUD.Controllers.OrderController",
+    "Method": "GetProductSummary",
+    "RelativePath": "api/Order/GetProductSummary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.Controllers.OrderController",
+    "Method": "GetTop3Customers",
+    "RelativePath": "api/Order/GetTop3Customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.Controllers.OrderController",
+    "Method": "GetUnorderedProducts",
+    "RelativePath": "api/Order/GetUnorderedProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.Controllers.OrderController",
     "Method": "InsertProduct",
     "RelativePath": "api/Order/InsertProduct",
     "HttpMethod": "POST",
@@ -81,17 +117,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CRUD.Helper.MessageHelper",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CRUD.Controllers.OrderController",
@@ -112,17 +138,7 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CRUD.Helper.MessageHelper",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CRUD.Controllers.WeatherForecastController",
