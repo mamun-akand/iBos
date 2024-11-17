@@ -325,6 +325,9 @@ namespace CRUD.Repository
         //API 09: Bulk Order with Transaction
         public async Task<MessageHelper> CreateBulkOrders(List<OrderDTO> orders)
         {
+            var listTemp = orders.Select(p => p.ProductName).ToList();
+            var productList = await _context.TblProducts.Where(p => listTemp.Contains(p.StrProductName)).ToListAsync();
+
             using var transaction = await _context.Database.BeginTransactionAsync();
 
             try
@@ -332,8 +335,7 @@ namespace CRUD.Repository
                 var newList = new List<TblOrder>(orders.Count());
                 foreach (var order in orders)
                 {
-                    var product = await _context.TblProducts
-                        .FirstOrDefaultAsync(p => p.StrProductName == order.ProductName);
+                    var product = productList.FirstOrDefault(p => p.StrProductName == order.ProductName);
 
                     if (product == null)
                     {
@@ -377,8 +379,6 @@ namespace CRUD.Repository
                 throw;
             }
         }
-
-
 
     }
 
