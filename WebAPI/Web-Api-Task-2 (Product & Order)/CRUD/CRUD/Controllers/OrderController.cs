@@ -109,5 +109,17 @@ namespace CRUD.Controllers
         }
 
 
+
+
+        //ECommerce
+        [HttpGet]
+        [Route("GetTop10MostRatedProducts")]
+        public async Task<IActionResult> GetTop10MostRatedProducts(long AccountId, long BranchId)
+        {
+            var result = await _IOrderRepo.GetTop10MostRatedProducts(AccountId, BranchId);
+            return Ok(result);
+        }
+
+
     }
 }

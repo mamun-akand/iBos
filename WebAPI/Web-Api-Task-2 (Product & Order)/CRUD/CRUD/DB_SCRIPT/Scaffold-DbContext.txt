@@ -1,2 +1,12 @@
-﻿ 
+﻿
+---------------------------------------/* Office PC Configuration */------------------------------------------------
+ 
 dotnet ef dbcontext scaffold "Data Source=MAMUN\SQLEXPRESS;Initial Catalog=dbERP;Connect Timeout=30;Encrypt=False;Trusted_Connection=true;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" Microsoft.EntityFrameworkCore.SqlServer -o "Models" -c "AppDbContext" --context-dir "DBContext" -t [dbo].[tblProducts] -t [dbo].[tblOrders] -f --project "C:\Users\ibos\Mamun\WebAPI\Task-01\CRUD\CRUD\CRUD.csproj"
+
+
+
+---------------------------------------/* Home PC Configuration */------------------------------------------------
+ 
+dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dbERP;Connect Timeout=30;Encrypt=False;Trusted_Connection=true;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" Microsoft.EntityFrameworkCore.SqlServer -o "Models" -c "AppDbContext" --context-dir "DBContext" -t [dbo].[tblProducts] -t [dbo].[tblOrders] -f --project "D:\Office\iBos\WebAPI\Web-Api-Task-2 (Product & Order)\CRUD\CRUD\CRUD.csproj"
+
+dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dbERP;Connect Timeout=30;Encrypt=False;Trusted_Connection=true;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" Microsoft.EntityFrameworkCore.SqlServer -o "Models" -c "AppDbContext" --context-dir "DBContext" -t [dbo].[tblProducts] -t [dbo].[tblOrders] -t [dbo].[items] -t [dbo].[itemGroups] -t [dbo].[EcomReviews] -f --project "D:\Office\iBos\WebAPI\Web-Api-Task-2 (Product & Order)\CRUD\CRUD\CRUD.csproj"

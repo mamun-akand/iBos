@@ -85,6 +85,27 @@
   },
   {
     "ContainingType": "CRUD.Controllers.OrderController",
+    "Method": "GetTop10MostRatedProducts",
+    "RelativePath": "api/Order/GetTop10MostRatedProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AccountId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "BranchId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUD.Controllers.OrderController",
     "Method": "GetTop3Customers",
     "RelativePath": "api/Order/GetTop3Customers",
     "HttpMethod": "GET",

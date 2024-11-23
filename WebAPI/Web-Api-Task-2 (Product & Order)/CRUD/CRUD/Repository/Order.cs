@@ -4,6 +4,7 @@ using CRUD.Helper;
 using CRUD.IRepository;
 using CRUD.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace CRUD.Repository
@@ -49,7 +50,6 @@ namespace CRUD.Repository
             try
             {
                 var productNameAfterTrimming = orderDTO.ProductName.Trim();
-                var customerNameAfterTrimming = orderDTO.CustomerName.Trim();
 
                 // Find the product name
                 var product = await _context.TblProducts.FirstOrDefaultAsync(p => p.StrProductName == productNameAfterTrimming);
@@ -74,7 +74,7 @@ namespace CRUD.Repository
                 var newOrder = new TblOrder
                 {
                     IntProductId = product.IntProductId,
-                    StrCustomerName = customerNameAfterTrimming,
+                    StrCustomerName = orderDTO.CustomerName.Trim(),
                     NumQuantity = orderDTO.Quantity,
                     DteOrderDateTime = DateTime.Now,
                     IsActive = true,
@@ -126,9 +126,10 @@ namespace CRUD.Repository
                 }
 
                 var quantityDifference = newQuantity - order.NumQuantity;
-                order.NumQuantity = newQuantity;        // Update Order Qty
-                product.NumStock -= quantityDifference; // Update Stock Qty
+                order.NumQuantity = newQuantity;            // Update Order Qty
+                product.NumStock -= quantityDifference;     // Update Stock Qty
                 order.DteLastActionDateTime = DateTime.Now; //LastAction Update
+
                 _context.TblOrders.Update(order);
                 _context.TblProducts.Update(product);
                 await _context.SaveChangesAsync();
@@ -297,7 +298,6 @@ namespace CRUD.Repository
                 throw;
             }
 
-
         }
 
         //API 08: Get Unordered Products
@@ -379,6 +379,91 @@ namespace CRUD.Repository
         }
 
 
+        //Ecommerce
+        public async Task<List<Top10MostRatedProductsDTO>> GetTop10MostRatedProducts(long AccountId, long BranchId)
+        {
+            try
+            {
+                //var averageOfEveryItemReviews = await _context.EcomReviews
+                //                                .Where(r => r.BranchId == BranchId && r.AccountId == AccountId && r.IsActive)
+                //                                .GroupBy(r => new { r.ItemId, r.AccountId, r.BranchId })
+                //                                .Select(g => new
+                //                                {
+                //                                    ItemId = g.Key.ItemId,
+                //                                    AccountId = g.Key.AccountId,
+                //                                    BranchId = g.Key.BranchId,
+                //                                    AverageRating = g.Average(r => (decimal)r.Rating)
+                //                                })
+                //                                .OrderByDescending(x => x.AverageRating)
+                //                                .Take(10)
+                //                                .ToListAsync();
+
+                //if (!averageOfEveryItemReviews.Any())
+                //{
+                //    throw new Exception("Data is not availabe");
+                //}
+
+                //var correspondingAvgItemIds = averageOfEveryItemReviews.Select(x => x.ItemId).ToList();
+                //var correspondingItems = await _context.Items.Where(i => correspondingAvgItemIds.Contains(i.ItemId) && i.BranchId == BranchId
+                //                                                                    && i.AccountId == AccountId && i.IsActive).ToListAsync();
+
+                //var topItemsPortion = (from review in averageOfEveryItemReviews
+                //                       join corrItem in correspondingItems on review.ItemId equals corrItem.ItemId
+                //                       where corrItem.IsVariant == false
+                //                       select new Top10MostRatedProductsDTO
+                //                       {
+                //                           ItemName = corrItem.ItemName,
+                //                           Description = corrItem.Description,
+                //                           Price = corrItem.Price,
+                //                           Rating = review.AverageRating
+                //                       })
+                //                        .ToList();
+
+                //var topItemsPortion2 = (from review in averageOfEveryItemReviews
+                //                        join corrItem in correspondingItems on review.ItemId equals corrItem.ItemId
+                //                        where corrItem.IsVariant == true
+                //                        join grItem in _context.ItemGroups on corrItem.GroupId equals grItem.GroupId
+                //                        select new Top10MostRatedProductsDTO
+                //                        {
+                //                            ItemName = grItem.GroupName,
+                //                            Description = corrItem.Description,
+                //                            Price = corrItem.Price,
+                //                            Rating = review.AverageRating
+                //                        })
+                //                        .ToList();
+
+                //topItemsPortion.AddRange(topItemsPortion2);
+                //topItemsPortion = topItemsPortion.OrderByDescending(item => item.Rating).ToList();
+
+                //return topItemsPortion;
+
+                var topItems = await (from review in _context.EcomReviews
+                      join corrItem in _context.Items on review.ItemId equals corrItem.ItemId
+                      where review.BranchId == BranchId 
+                            && review.AccountId == AccountId 
+                            && review.IsActive 
+                            && corrItem.IsActive 
+                            && corrItem.BranchId == BranchId
+                      group new { review, corrItem } by new { corrItem.ItemId, corrItem.ItemName, corrItem.Description, corrItem.Price, corrItem.IsVariant, corrItem.GroupId } into g
+                      orderby g.Average(r => (decimal)r.review.Rating) descending
+                      select new Top10MostRatedProductsDTO
+                      {
+                          ItemName = g.Key.IsVariant
+                                     ? _context.ItemGroups.Where(gr => gr.GroupId == g.Key.GroupId).Select(gr => gr.GroupName).FirstOrDefault()
+                                     : g.Key.ItemName,
+                          Description = g.Key.Description,
+                          Price = g.Key.Price,
+                          Rating = g.Average(r => (decimal)r.review.Rating)
+                      }).Take(10).ToListAsync();
+
+                 return topItems;
+
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
 
     }
 

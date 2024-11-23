@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\CRUD.csproj": {}
+    "D:\\Office\\iBos\\WebAPI\\Web-Api-Task-2 (Product & Order)\\CRUD\\CRUD\\CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\CRUD.csproj": {
+    "D:\\Office\\iBos\\WebAPI\\Web-Api-Task-2 (Product & Order)\\CRUD\\CRUD\\CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\CRUD.csproj",
+        "projectUniqueName": "D:\\Office\\iBos\\WebAPI\\Web-Api-Task-2 (Product & Order)\\CRUD\\CRUD\\CRUD.csproj",
         "projectName": "CRUD",
-        "projectPath": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\CRUD.csproj",
-        "packagesPath": "C:\\Users\\ibos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\obj\\",
+        "projectPath": "D:\\Office\\iBos\\WebAPI\\Web-Api-Task-2 (Product & Order)\\CRUD\\CRUD\\CRUD.csproj",
+        "packagesPath": "C:\\Users\\The Mamun\\.nuget\\packages\\",
+        "outputPath": "D:\\Office\\iBos\\WebAPI\\Web-Api-Task-2 (Product & Order)\\CRUD\\CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ibos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\The Mamun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net6.0": {
@@ -52,17 +52,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[6.0.36, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[6.0.36, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[6.0.36, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

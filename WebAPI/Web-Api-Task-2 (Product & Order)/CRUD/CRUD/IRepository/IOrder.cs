@@ -17,6 +17,8 @@ namespace CRUD.IRepository
         Task<MessageHelper> CreateBulkOrders(List<OrderDTO> orders); //API 09
 
 
+        // Ecommerce Task
+        Task<List<Top10MostRatedProductsDTO>> GetTop10MostRatedProducts(long AccountId, long BranchId);
 
     }
 }
