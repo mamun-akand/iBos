@@ -325,6 +325,9 @@ namespace CRUD.Repository
         //API 09: Bulk Order with Transaction
         public async Task<MessageHelper> CreateBulkOrders(List<OrderDTO> orders)
         {
+            var listTemp = orders.Select(p => p.ProductName).ToList();
+            var productList = await _context.TblProducts.Where(p => listTemp.Contains(p.StrProductName)).ToListAsync();
+
             using var transaction = await _context.Database.BeginTransactionAsync();
 
             try
@@ -332,8 +335,7 @@ namespace CRUD.Repository
                 var newList = new List<TblOrder>(orders.Count());
                 foreach (var order in orders)
                 {
-                    var product = await _context.TblProducts
-                        .FirstOrDefaultAsync(p => p.StrProductName == order.ProductName);
+                    var product = productList.FirstOrDefault(p => p.StrProductName == order.ProductName);
 
                     if (product == null)
                     {
@@ -378,6 +380,7 @@ namespace CRUD.Repository
             }
         }
 
+<<<<<<< HEAD
 
         //Ecommerce
         public async Task<List<Top10MostRatedProductsDTO>> GetTop10MostRatedProducts(long AccountId, long BranchId)
@@ -465,6 +468,8 @@ namespace CRUD.Repository
             }
         }
 
+=======
+>>>>>>> 25823352ab1b350ad16250b51c0e09b71ed77e7f
     }
 
 }

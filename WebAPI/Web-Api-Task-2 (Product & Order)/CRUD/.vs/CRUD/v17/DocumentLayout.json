@@ -7,6 +7,7 @@
       "RelativeMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|solutionrelative:crud\\repository\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|d:\\office\\ibos\\webapi\\web-api-task-2 (product \u0026 order)\\crud\\crud\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|solutionrelative:crud\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,6 +38,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|d:\\office\\ibos\\webapi\\web-api-task-2 (product \u0026 order)\\crud\\crud\\models\\tblorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|solutionrelative:crud\\models\\tblorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|c:\\users\\ibos\\mamun\\webapi\\task-01\\crud\\crud\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|solutionrelative:crud\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|c:\\users\\ibos\\mamun\\webapi\\task-01\\crud\\crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29575539-B09E-4C3B-AC8F-D6788E2A072B}|CRUD\\CRUD.csproj|solutionrelative:crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 25823352ab1b350ad16250b51c0e09b71ed77e7f
     }
   ],
   "DocumentGroupContainers": [
@@ -46,6 +55,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 379,
+<<<<<<< HEAD
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -169,6 +179,47 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T19:26:52.663Z",
+=======
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\Program.cs",
+              "RelativeDocumentMoniker": "CRUD\\Program.cs",
+              "ToolTip": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\Program.cs",
+              "RelativeToolTip": "CRUD\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T08:50:46.391Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\Repository\\Order.cs",
+              "RelativeDocumentMoniker": "CRUD\\Repository\\Order.cs",
+              "ToolTip": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\Repository\\Order.cs",
+              "RelativeToolTip": "CRUD\\Repository\\Order.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAowPYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T11:32:13.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "CRUD\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\ibos\\Mamun\\WebAPI\\Task-01\\CRUD\\CRUD\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "CRUD\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T09:02:08.969Z",
+>>>>>>> 25823352ab1b350ad16250b51c0e09b71ed77e7f
               "EditorCaption": ""
             }
           ]
